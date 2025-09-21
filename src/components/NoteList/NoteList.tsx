@@ -28,10 +28,7 @@ const NoteList = ({ notes }: NoteListProps) => {
             <span className={css.tag}>{n.tag}</span>
             <button
               className={css.button}
-              onClick={() => {
-                console.log('🟡 Delete clicked for note:', n)
-                mutation.mutate(n._id)
-              }}
+              onClick={() => mutation.mutate(n._id)}
               disabled={mutation.isPending}
             >
               Delete
